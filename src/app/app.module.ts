@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroService } from './hero.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     BrowserModule,
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
   ],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
